@@ -8,5 +8,7 @@
   <foreignModel>kotlinMetaModel.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="KotlinMetaModel" basePackage="kotlin meta model" disposableProviderFactory="true"
-      ecorePackage="kotlinMetaModel.ecore#/"/>
+      ecorePackage="kotlinMetaModel.ecore#/">
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//KotlinProgram"/>
+  </genPackages>
 </genmodel:GenModel>
