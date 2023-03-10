@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/KotlinMetaModel/src-gen" creationIcons="false"
+    editDirectory="/KotlinMetaModel.edit/src-gen" editorDirectory="/KotlinMetaModel.editor/src-gen"
+    modelPluginID="KotlinMetaModel" modelName="KotlinMetaModel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>kotlinMetaModel.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="KotlinMetaModel" disposableProviderFactory="true" ecorePackage="kotlinMetaModel.ecore#/">
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//KotlinProgram">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//KotlinProgram/instruction"/>
+    </genClasses>
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//Instruction"/>
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//Declaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kotlinMetaModel.ecore#//Declaration/name"/>
+    </genClasses>
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//Assignement"/>
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//ClassDeclaration"/>
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//FunctionDeclaration"/>
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//VariableDeclaration"/>
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//VariableAssignement"/>
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//FunctionCall"/>
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//ClassConstruction"/>
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//NoOperation"/>
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//SingleLineComment"/>
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//MultiLineComment"/>
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//Comment">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//Comment/body"/>
+    </genClasses>
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//body">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//body/line"/>
+    </genClasses>
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//Line"/>
+  </genPackages>
+</genmodel:GenModel>
