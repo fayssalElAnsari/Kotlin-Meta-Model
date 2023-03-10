@@ -27,7 +27,7 @@
     <genClasses ecoreClass="kotlinMetaModel.ecore#//SingleLineComment"/>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//MultiLineComment"/>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//Comment">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//Comment/body"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//Comment/body"/>
     </genClasses>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//body">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//body/line"/>
