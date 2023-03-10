@@ -24,8 +24,12 @@
     <genClasses ecoreClass="kotlinMetaModel.ecore#//FunctionCall"/>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//ClassConstruction"/>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//NoOperation"/>
-    <genClasses ecoreClass="kotlinMetaModel.ecore#//SingleLineComment"/>
-    <genClasses ecoreClass="kotlinMetaModel.ecore#//MultiLineComment"/>
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//SingleLineComment">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//SingleLineComment/line"/>
+    </genClasses>
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//MultiLineComment">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//MultiLineComment/line"/>
+    </genClasses>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//Comment">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//Comment/body"/>
     </genClasses>
