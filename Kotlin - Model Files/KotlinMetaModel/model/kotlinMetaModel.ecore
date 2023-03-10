@@ -19,19 +19,15 @@
   <eClassifiers xsi:type="ecore:EClass" name="ClassConstruction" eSuperTypes="#//Assignement"/>
   <eClassifiers xsi:type="ecore:EClass" name="NoOperation" abstract="true" eSuperTypes="#//Instruction"/>
   <eClassifiers xsi:type="ecore:EClass" name="SingleLineComment" eSuperTypes="#//Comment">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="line" lowerBound="1" eType="#//Line"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="line" lowerBound="1" eType="#//Line"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MultiLineComment" eSuperTypes="#//Comment">
     <eStructuralFeatures xsi:type="ecore:EReference" name="line" lowerBound="1" upperBound="-1"
-        eType="#//Line"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Comment" abstract="true" eSuperTypes="#//NoOperation">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="body" lowerBound="1" eType="#//body"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="body">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="line" lowerBound="1" upperBound="-1"
         eType="#//Line" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Line"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Comment" abstract="true" eSuperTypes="#//NoOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Line">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
 </ecore:EPackage>
