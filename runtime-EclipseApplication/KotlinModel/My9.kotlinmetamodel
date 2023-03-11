@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kotlinMetaModel:KotlinProgram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:kotlinMetaModel="http://www.example.org/kotlinMetaModel">
-  <type xsi:type="kotlinMetaModel:FunctionCall"/>
+  <instruction xsi:type="kotlinMetaModel:FunctionDeclaration">
+    <return xsi:type="kotlinMetaModel:Void" href="PrimitiveTypes01.kotlinmetamodel#//@type.1"/>
+  </instruction>
 </kotlinMetaModel:KotlinProgram>
