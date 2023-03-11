@@ -23,7 +23,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="return" lowerBound="1"
         eType="#//Type"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VariableDeclaration" eSuperTypes="#//Declaration"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VariableDeclaration" eSuperTypes="#//Declaration">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assignement" eType="#//Assignement"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VariableAssignement" eSuperTypes="#//Assignement"/>
   <eClassifiers xsi:type="ecore:EClass" name="FunctionCall" eSuperTypes="#//Assignement"/>
   <eClassifiers xsi:type="ecore:EClass" name="ClassConstruction" eSuperTypes="#//Assignement"/>
