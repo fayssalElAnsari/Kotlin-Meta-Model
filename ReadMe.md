@@ -1,7 +1,7 @@
 ## Project Description
 In this project we will try to build a meta model for the famous programming language KOTLIN.
 
-<img src="https://github.com/fayssalElAnsari/Kotlin-Meta-Model/blob/0a17f915f7da55f62969caa99fee786c07d5a5df/Kotlin%20-%20Model%20Files/KotlinMetaModel/model/kotlinMetaModel.png" width="300">
+<img src="https://github.com/fayssalElAnsari/Kotlin-Meta-Model/blob/0a17f915f7da55f62969caa99fee786c07d5a5df/Kotlin%20-%20Model%20Files/KotlinMetaModel/model/kotlinMetaModel.png" width="500">
 
 ## General Notes
 * In each step of the meta-model development, we will try to reproduce a code snippet with increasing complexity. In a way that reflects the logic behind the Kotlin language. While avoiding to build unecessary entities and reusing entities when possible, and using the right type of relationship between them. Our goal is to let the user generate a syntaxicly **correct** code from a built kotlin program model.
@@ -54,8 +54,11 @@ fun incrementX() {
     x += 1 
 }
 ```
-    * we differentiate between immediate and deffered assignment using a boolean attribute on our declaration class
-    * we have the possibility to reference one assignment object in our model, it should be required if immediateAssignment is set to `true`, and that assignment should be skipped while generating code (since both the declaration and assignment will be considered as one compound instruction).
+**NOTES**
+* we differentiate between immediate and deffered assignment using a boolean attribute on our declaration class
+* we have the possibility to reference one assignment object in our model, it should be required if immediateAssignment is set to `true`, and that assignment should be skipped while generating code (since both the declaration and assignment will be considered as one compound instruction).
+<img src="https://github.com/fayssalElAnsari/Kotlin-Meta-Model/blob/4fd11907abfe0028d6dbe9946490e108d397b506/Kotlin%20-%20Model%20Files/KotlinMetaModel/model/VariableModel.png" width="400">
+
 
 * [ ] Print to the standard output
 ```kotlin
