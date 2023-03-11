@@ -38,8 +38,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="FunctionCall" eSuperTypes="#//Assignement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="functiondeclaration" lowerBound="1"
         eType="#//FunctionDeclaration"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parameterAssignement" upperBound="-1"
-        eType="#//Assignement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ClassConstruction" eSuperTypes="#//Assignement"/>
   <eClassifiers xsi:type="ecore:EClass" name="NoOperation" abstract="true" eSuperTypes="#//Instruction"/>

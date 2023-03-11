@@ -38,7 +38,6 @@
     </genClasses>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//FunctionCall">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//FunctionCall/functiondeclaration"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//FunctionCall/parameterAssignement"/>
     </genClasses>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//ClassConstruction"/>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//NoOperation"/>

@@ -22,10 +22,9 @@
   </instruction>
   <instruction xsi:type="kotlinMetaModel:VariableAssignement" variabledeclaration="//@instruction.5" value="3"/>
   <instruction xsi:type="kotlinMetaModel:FunctionCall">
-    <functiondeclaration href="PredefinedFunctions.kotlinmetamodel#//@instruction.0"/>
     <parameterAssignement xsi:type="kotlinMetaModel:VariableAssignement"/>
   </instruction>
   <instruction xsi:type="kotlinMetaModel:FunctionCall">
-    <functiondeclaration href="PredefinedFunctions.kotlinmetamodel#//@instruction.1"/>
+
   </instruction>
 </kotlinMetaModel:KotlinProgram>
