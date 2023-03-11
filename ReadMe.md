@@ -4,10 +4,11 @@ In this project we will try to build a meta model for the famous programming lan
 
 * In each step of the meta-model development, we will try to reproduce a code snippet with increasing complexity. In a way that reflects the logic behind the Kotlin language. While avoiding to build unecessary entities and reusing entities when possible, and using the right type of relationship between them. Our goal is to let the user generate a syntaxicly **correct** code from a built kotlin program model.
 
+* The order of execution of steps is the same as the order of adding childs to an entitiy.
 
 ## Meta Model Features
 ### 1.
-* [ ] Comments
+* [x] Comments
 ```kotlin
 // This is an end-of-line comment
 
@@ -17,16 +18,6 @@ In this project we will try to build a meta model for the famous programming lan
 /* The comment starts here
 /* contains a nested comment *⁠/
 and ends here. */
-```
-* [ ] Program Entry Point (main functin)
-```kotlin
-fun main() {
-    println("Hello world!")
-}
-
-fun main(args: Array<String>) {
-    println(args.contentToString())
-}
 ```
 * [ ] Functions
 ```kotlin
@@ -42,6 +33,17 @@ fun printSum(a: Int, b: Int): Unit {
 
 fun printSum(a: Int, b: Int) {
     println("sum of $a and $b is ${a + b}")
+}
+```
+
+* [ ] Program Entry Point (main functin)
+```kotlin
+fun main() {
+    println("Hello world!")
+}
+
+fun main(args: Array<String>) {
+    println(args.contentToString())
 }
 ```
 * [ ] Variables
