@@ -23,7 +23,7 @@ In this project we will try to build a meta model for the famous programming lan
 /* contains a nested comment *⁠/
 and ends here. */
 ```
-![Comment Model](https://github.com/fayssalElAnsari/Kotlin-Meta-Model/blob/47a9d027e9aae83341f24778667aff1908fc37af/Kotlin%20-%20Model%20Files/KotlinMetaModel/model/CommentModel.png | widht = 100)
+<img src="https://github.com/fayssalElAnsari/Kotlin-Meta-Model/blob/47a9d027e9aae83341f24778667aff1908fc37af/Kotlin%20-%20Model%20Files/KotlinMetaModel/model/CommentModel.png" width="300">
 
 
 * [ ] Functions
