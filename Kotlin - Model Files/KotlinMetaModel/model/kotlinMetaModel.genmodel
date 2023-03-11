@@ -21,8 +21,8 @@
     <genClasses ecoreClass="kotlinMetaModel.ecore#//Assignement"/>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//ClassDeclaration"/>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//FunctionDeclaration">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//FunctionDeclaration/return"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//FunctionDeclaration/parameter"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//FunctionDeclaration/returns"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//FunctionDeclaration/parameter"/>
     </genClasses>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//VariableDeclaration"/>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//VariableAssignement"/>
@@ -44,11 +44,12 @@
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//MultipleLineComment/line"/>
     </genClasses>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//PrimitiveType"/>
-    <genClasses provider="Stateful" ecoreClass="kotlinMetaModel.ecore#//Int"/>
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//Int"/>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//Type"/>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//Parameter">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kotlinMetaModel.ecore#//Parameter/name"/>
     </genClasses>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//Void"/>
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//Unit"/>
   </genPackages>
 </genmodel:GenModel>
