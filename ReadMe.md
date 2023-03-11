@@ -1,7 +1,7 @@
 ## Project Description
 In this project we will try to build a meta model for the famous programming language KOTLIN.
 
-![Kotlin Meta Model](Kotlin - Model Files/KotlinMetaModel/model/kotlinMetaModel.png)
+<img src="https://github.com/fayssalElAnsari/Kotlin-Meta-Model/blob/0a17f915f7da55f62969caa99fee786c07d5a5df/Kotlin%20-%20Model%20Files/KotlinMetaModel/model/kotlinMetaModel.png" width="300">
 
 ## General Notes
 * In each step of the meta-model development, we will try to reproduce a code snippet with increasing complexity. In a way that reflects the logic behind the Kotlin language. While avoiding to build unecessary entities and reusing entities when possible, and using the right type of relationship between them. Our goal is to let the user generate a syntaxicly **correct** code from a built kotlin program model.
