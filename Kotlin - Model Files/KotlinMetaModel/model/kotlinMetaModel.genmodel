@@ -21,8 +21,8 @@
     <genClasses ecoreClass="kotlinMetaModel.ecore#//Assignement"/>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//ClassDeclaration"/>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//FunctionDeclaration">
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//FunctionDeclaration/returns"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//FunctionDeclaration/parameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//FunctionDeclaration/return"/>
     </genClasses>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//VariableDeclaration"/>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//VariableAssignement"/>
@@ -48,6 +48,8 @@
     <genClasses ecoreClass="kotlinMetaModel.ecore#//Type"/>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//Parameter">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kotlinMetaModel.ecore#//Parameter/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//Parameter/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//Parameter/assignement"/>
     </genClasses>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//Void"/>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//Unit"/>
