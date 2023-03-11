@@ -1,2 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<kotlinMetaModel:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:kotlinMetaModel="http://www.example.org/kotlinMetaModel" name="main"/>
+<kotlinMetaModel:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:kotlinMetaModel="http://www.example.org/kotlinMetaModel" name="main">
+  <kotlinProgram href="001.kotlinmetamodel#/"/>
+</kotlinMetaModel:Package>

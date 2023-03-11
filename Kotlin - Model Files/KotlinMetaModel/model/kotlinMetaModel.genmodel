@@ -19,16 +19,22 @@
     <genClasses ecoreClass="kotlinMetaModel.ecore#//Declaration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kotlinMetaModel.ecore#//Declaration/name"/>
     </genClasses>
-    <genClasses ecoreClass="kotlinMetaModel.ecore#//Assignement"/>
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//Assignement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//Assignement/variabledeclaration"/>
+    </genClasses>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//ClassDeclaration"/>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//FunctionDeclaration">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//FunctionDeclaration/parameter"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//FunctionDeclaration/return"/>
     </genClasses>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//VariableDeclaration">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//VariableDeclaration/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kotlinMetaModel.ecore#//VariableDeclaration/immediateAssignment"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//VariableDeclaration/assignement"/>
     </genClasses>
-    <genClasses ecoreClass="kotlinMetaModel.ecore#//VariableAssignement"/>
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//VariableAssignement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kotlinMetaModel.ecore#//VariableAssignement/value"/>
+    </genClasses>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//FunctionCall"/>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//ClassConstruction"/>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//NoOperation"/>
