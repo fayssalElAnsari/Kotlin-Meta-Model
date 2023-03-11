@@ -37,7 +37,7 @@ import kotlin.text.*
 <img src="https://github.com/fayssalElAnsari/Kotlin-Meta-Model/blob/ddf4b69407e7fbaed2ee9a3813543ad74bc3df41/Kotlin%20-%20Model%20Files/KotlinMetaModel/model/PackageModel.png" width="300">
 
 
-* [ ] Variables
+* [x] Variables
 ```kotlin
 val a: Int = 1  // immediate assignment
 val b = 2   // `Int` type is inferred
@@ -54,6 +54,8 @@ fun incrementX() {
     x += 1 
 }
 ```
+    * we differentiate between immediate and deffered assignment using a boolean attribute on our declaration class
+    * we have the possibility to reference one assignment object in our model, it should be required if immediateAssignment is set to `true`, and that assignment should be skipped while generating code (since both the declaration and assignment will be considered as one compound instruction).
 
 * [ ] Print to the standard output
 ```kotlin
