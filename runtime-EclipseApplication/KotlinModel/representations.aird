@@ -9,8 +9,8 @@
   <semanticResources>Old/My7.kotlinmetamodel</semanticResources>
   <semanticResources>Old/My8.kotlinmetamodel</semanticResources>
   <semanticResources>Old/My9.kotlinmetamodel</semanticResources>
-  <semanticResources>main/MainPackage.kotlinmetamodel</semanticResources>
   <semanticResources>main/PrimitiveTypesLib.kotlinmetamodel</semanticResources>
-  <semanticResources>main/Predefined.kotlinmetamodel</semanticResources>
+  <semanticResources>main/pkgMain.kotlinmetamodel</semanticResources>
+  <semanticResources>main/pkgPredefined.kotlinmetamodel</semanticResources>
   <semanticResources>main/001.kotlinmetamodel</semanticResources>
 </viewpoint:DAnalysis>
