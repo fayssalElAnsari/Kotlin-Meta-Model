@@ -34,7 +34,7 @@
     <genClasses ecoreClass="kotlinMetaModel.ecore#//Package">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kotlinMetaModel.ecore#//Package/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//Package/parent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//Package/kotlinprogram"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//Package/kotlinProgram"/>
     </genClasses>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//Line">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kotlinMetaModel.ecore#//Line/content"/>

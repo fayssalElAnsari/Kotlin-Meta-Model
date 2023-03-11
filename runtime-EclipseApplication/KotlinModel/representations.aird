@@ -12,4 +12,5 @@
   <semanticResources>main/MainPackage.kotlinmetamodel</semanticResources>
   <semanticResources>main/PrimitiveTypesLib.kotlinmetamodel</semanticResources>
   <semanticResources>main/Predefined.kotlinmetamodel</semanticResources>
+  <semanticResources>main/001.kotlinmetamodel</semanticResources>
 </viewpoint:DAnalysis>

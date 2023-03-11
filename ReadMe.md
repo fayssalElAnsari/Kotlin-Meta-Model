@@ -26,7 +26,7 @@ and ends here. */
 <img src="https://github.com/fayssalElAnsari/Kotlin-Meta-Model/blob/47a9d027e9aae83341f24778667aff1908fc37af/Kotlin%20-%20Model%20Files/KotlinMetaModel/model/CommentModel.png" width="300">
 
 
-* [ ] Package definition and imports
+* [x] Package definition and imports
 ```kotlin
 package my.demo
 

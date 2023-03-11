@@ -32,7 +32,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Package">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//Package"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="kotlinprogram" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="kotlinProgram" upperBound="-1"
         eType="#//KotlinProgram"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Line">
