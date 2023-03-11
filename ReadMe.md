@@ -1,7 +1,9 @@
 ## Project Description
 In this project we will try to build a meta model for the famous programming language KOTLIN.
 
+![Kotlin Meta Model](Kotlin - Model Files/KotlinMetaModel/model/kotlinMetaModel.png)
 
+## General Notes
 * In each step of the meta-model development, we will try to reproduce a code snippet with increasing complexity. In a way that reflects the logic behind the Kotlin language. While avoiding to build unecessary entities and reusing entities when possible, and using the right type of relationship between them. Our goal is to let the user generate a syntaxicly **correct** code from a built kotlin program model.
 
 * The order of execution of steps is the same as the order of adding childs to an entity.
@@ -21,6 +23,9 @@ In this project we will try to build a meta model for the famous programming lan
 /* contains a nested comment *⁠/
 and ends here. */
 ```
+![Comment Model](Kotlin - Model Files/KotlinMetaModel/model/CommentModel.png)
+
+
 * [ ] Functions
 ```kotlin
 fun sum(a: Int, b: Int): Int {
