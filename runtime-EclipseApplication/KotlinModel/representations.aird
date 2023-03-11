@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" uid="_9TeAsL-OEe2OrrD_LfcTUA" version="15.0.0.202209061200">
-  <semanticResources>My.kotlinmetamodel</semanticResources>
-  <semanticResources>My1.kotlinmetamodel</semanticResources>
-  <semanticResources>My2.kotlinmetamodel</semanticResources>
-  <semanticResources>My3.kotlinmetamodel</semanticResources>
-  <semanticResources>My4.kotlinmetamodel</semanticResources>
-  <semanticResources>My5.kotlinmetamodel</semanticResources>
-  <semanticResources>My6.kotlinmetamodel</semanticResources>
-  <semanticResources>My7.kotlinmetamodel</semanticResources>
-  <semanticResources>My8.kotlinmetamodel</semanticResources>
-  <semanticResources>My9.kotlinmetamodel</semanticResources>
-  <semanticResources>PrimitiveTypes01.kotlinmetamodel</semanticResources>
-  <semanticResources>My10.kotlinmetamodel</semanticResources>
-  <semanticResources>My11.kotlinmetamodel</semanticResources>
-  <semanticResources>My12.kotlinmetamodel</semanticResources>
+  <semanticResources>Old/My1.kotlinmetamodel</semanticResources>
+  <semanticResources>Old/My10.kotlinmetamodel</semanticResources>
+  <semanticResources>Old/My12.kotlinmetamodel</semanticResources>
+  <semanticResources>Old/My13.kotlinmetamodel</semanticResources>
+  <semanticResources>Old/My4.kotlinmetamodel</semanticResources>
+  <semanticResources>Old/My5.kotlinmetamodel</semanticResources>
+  <semanticResources>Old/My7.kotlinmetamodel</semanticResources>
+  <semanticResources>Old/My8.kotlinmetamodel</semanticResources>
+  <semanticResources>Old/My9.kotlinmetamodel</semanticResources>
+  <semanticResources>main/MainPackage.kotlinmetamodel</semanticResources>
+  <semanticResources>main/PrimitiveTypesLib.kotlinmetamodel</semanticResources>
+  <semanticResources>main/Predefined.kotlinmetamodel</semanticResources>
 </viewpoint:DAnalysis>
