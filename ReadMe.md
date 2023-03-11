@@ -26,6 +26,42 @@ and ends here. */
 <img src="https://github.com/fayssalElAnsari/Kotlin-Meta-Model/blob/47a9d027e9aae83341f24778667aff1908fc37af/Kotlin%20-%20Model%20Files/KotlinMetaModel/model/CommentModel.png" width="300">
 
 
+* [ ] Package definition and imports
+```kotlin
+package my.demo
+
+import kotlin.text.*
+
+// ...
+```
+
+* [ ] Variables
+```kotlin
+val a: Int = 1  // immediate assignment
+val b = 2   // `Int` type is inferred
+val c: Int  // Type required when no initializer is provided
+c = 3       // deferred assignment
+
+var x = 5 // `Int` type is inferred
+x += 1
+
+val PI = 3.14
+var x = 0
+
+fun incrementX() { 
+    x += 1 
+}
+```
+
+* [ ] Print to the standard output
+```kotlin
+print("Hello ")
+print("world!")
+
+println("Hello world!")
+println(42)
+```
+
 * [ ] Functions
 ```kotlin
 fun sum(a: Int, b: Int): Int {
@@ -53,31 +89,8 @@ fun main(args: Array<String>) {
     println(args.contentToString())
 }
 ```
-* [ ] Variables
-```kotlin
-val a: Int = 1  // immediate assignment
-val b = 2   // `Int` type is inferred
-val c: Int  // Type required when no initializer is provided
-c = 3       // deferred assignment
 
-var x = 5 // `Int` type is inferred
-x += 1
 
-val PI = 3.14
-var x = 0
-
-fun incrementX() { 
-    x += 1 
-}
-```
-* [ ] Package definition and imports
-```kotlin
-package my.demo
-
-import kotlin.text.*
-
-// ...
-```
 * [ ] Creating classes and instances
 ```kotlin
 class Shape
@@ -94,14 +107,6 @@ open class Shape
 class Rectangle(var height: Double, var length: Double): Shape() {
     var perimeter = (height + length) * 2
 }
-```
-* [ ] Print to the standard output
-```kotlin
-print("Hello ")
-print("world!")
-
-println("Hello world!")
-println(42)
 ```
 
 ### 2.
