@@ -21,4 +21,10 @@
     <type xsi:type="kotlinMetaModel:Int" href="PrimitiveTypesLib.kotlinmetamodel#//@type.0"/>
   </instruction>
   <instruction xsi:type="kotlinMetaModel:VariableAssignement" variabledeclaration="//@instruction.5" value="3"/>
+  <instruction xsi:type="kotlinMetaModel:FunctionCall">
+    <functiondeclaration href="PredefinedFunctions.kotlinmetamodel#//@instruction.0"/>
+  </instruction>
+  <instruction xsi:type="kotlinMetaModel:FunctionCall">
+    <functiondeclaration href="PredefinedFunctions.kotlinmetamodel#//@instruction.1"/>
+  </instruction>
 </kotlinMetaModel:KotlinProgram>

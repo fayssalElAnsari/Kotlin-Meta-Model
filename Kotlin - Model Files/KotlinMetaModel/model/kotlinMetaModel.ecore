@@ -24,6 +24,8 @@
         eType="#//Parameter" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="return" lowerBound="1"
         eType="#//Type"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instruction" upperBound="-1"
+        eType="#//Instruction" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VariableDeclaration" eSuperTypes="#//Declaration">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Type"/>
@@ -33,7 +35,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="VariableAssignement" eSuperTypes="#//Assignement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FunctionCall" eSuperTypes="#//Assignement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionCall" eSuperTypes="#//Assignement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="functiondeclaration" lowerBound="1"
+        eType="#//FunctionDeclaration"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ClassConstruction" eSuperTypes="#//Assignement"/>
   <eClassifiers xsi:type="ecore:EClass" name="NoOperation" abstract="true" eSuperTypes="#//Instruction"/>
   <eClassifiers xsi:type="ecore:EClass" name="Comment" abstract="true" eSuperTypes="#//NoOperation"/>
@@ -65,4 +70,5 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Void" eSuperTypes="#//PrimitiveType"/>
   <eClassifiers xsi:type="ecore:EClass" name="Unit" eSuperTypes="#//PrimitiveType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="String" eSuperTypes="#//PrimitiveType"/>
 </ecore:EPackage>

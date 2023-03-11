@@ -3,4 +3,5 @@
   <type xsi:type="kotlinMetaModel:Int"/>
   <type xsi:type="kotlinMetaModel:Void"/>
   <type xsi:type="kotlinMetaModel:Unit"/>
+  <type xsi:type="kotlinMetaModel:String"/>
 </kotlinMetaModel:KotlinProgram>
