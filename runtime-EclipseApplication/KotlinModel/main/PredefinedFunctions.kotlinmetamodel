@@ -4,6 +4,7 @@
     <parameter name="message">
       <type xsi:type="kotlinMetaModel:String" href="PrimitiveTypesLib.kotlinmetamodel#//@type.3"/>
     </parameter>
+    <return xsi:type="kotlinMetaModel:String" href="PrimitiveTypesLib.kotlinmetamodel#//@type.3"/>
   </instruction>
   <instruction xsi:type="kotlinMetaModel:FunctionDeclaration" name="println">
     <parameter name="message">
