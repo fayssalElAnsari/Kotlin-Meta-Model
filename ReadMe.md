@@ -34,6 +34,8 @@ import kotlin.text.*
 
 // ...
 ```
+<img src="https://github.com/fayssalElAnsari/Kotlin-Meta-Model/blob/ddf4b69407e7fbaed2ee9a3813543ad74bc3df41/Kotlin%20-%20Model%20Files/KotlinMetaModel/model/PackageModel.png" width="300">
+
 
 * [ ] Variables
 ```kotlin
