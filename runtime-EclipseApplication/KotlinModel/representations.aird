@@ -13,5 +13,6 @@
   <semanticResources>main/pkgMain.kotlinmetamodel</semanticResources>
   <semanticResources>main/pkgPredefined.kotlinmetamodel</semanticResources>
   <semanticResources>main/001.kotlinmetamodel</semanticResources>
+  <semanticResources>main/002.kotlinmetamodel</semanticResources>
   <semanticResources>main/PredefinedFunctions.kotlinmetamodel</semanticResources>
 </viewpoint:DAnalysis>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kotlinMetaModel:KotlinProgram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:kotlinMetaModel="http://www.example.org/kotlinMetaModel" fileName="001">
-  <instruction xsi:type="kotlinMetaModel:FunctionDeclaration" name="sum">
+
     <parameter name="a">
       <type xsi:type="kotlinMetaModel:Int" href="PrimitiveTypesLib.kotlinmetamodel#//@type.0"/>
     </parameter>
@@ -20,12 +20,5 @@
   <instruction xsi:type="kotlinMetaModel:VariableDeclaration" name="c">
     <type xsi:type="kotlinMetaModel:Int" href="PrimitiveTypesLib.kotlinmetamodel#//@type.0"/>
   </instruction>
-  <instruction xsi:type="kotlinMetaModel:VariableAssignement" variabledeclaration="//@instruction.5" value="3"/>
-  <instruction xsi:type="kotlinMetaModel:FunctionCall">
-    <functiondeclaration href="PredefinedFunctions.kotlinmetamodel#//@instruction.0"/>
-    <parameterAssignement xsi:type="kotlinMetaModel:VariableAssignement"/>
-  </instruction>
-  <instruction xsi:type="kotlinMetaModel:FunctionCall">
-    <functiondeclaration href="PredefinedFunctions.kotlinmetamodel#//@instruction.1"/>
-  </instruction>
+
 </kotlinMetaModel:KotlinProgram>
