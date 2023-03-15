@@ -3,11 +3,11 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="kotlinMetaModel" nsURI="http://www.example.org/kotlinMetaModel"
     nsPrefix="kotlinMetaModel">
   <eClassifiers xsi:type="ecore:EClass" name="KotlinProgram">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="instruction" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instructions" upperBound="-1"
         eType="#//Instruction" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" upperBound="-1" eType="#//Type"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="import" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="imports" upperBound="-1"
         eType="#//Package"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fileName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -15,40 +15,38 @@
   <eClassifiers xsi:type="ecore:EClass" name="Declaration" abstract="true" eSuperTypes="#//Instruction">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Assignement" abstract="true" eSuperTypes="#//Instruction #//Type">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="variabledeclaration" eType="#//VariableDeclaration"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Assignment" abstract="true" eSuperTypes="#//Instruction">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variableDeclaration" eType="#//VariableDeclaration"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ClassDeclaration" eSuperTypes="#//Declaration"/>
-  <eClassifiers xsi:type="ecore:EClass" name="FunctionDeclaration" eSuperTypes="#//Declaration">
+  <eClassifiers xsi:type="ecore:EClass" name="Function" eSuperTypes="#//Declaration">
     <eStructuralFeatures xsi:type="ecore:EReference" name="return" lowerBound="1"
         eType="#//Type"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="instruction" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instructions" upperBound="-1"
         eType="#//Instruction" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
         eType="#//VariableDeclaration"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VariableDeclaration" eSuperTypes="#//Declaration">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Type"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="immediateAssignment" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="assignement" eType="#//Assignement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assignment" eType="#//Assignment"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VariableAssignement" eSuperTypes="#//Assignement">
+  <eClassifiers xsi:type="ecore:EClass" name="VariableAssignement" eSuperTypes="#//Assignment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FunctionCall" eSuperTypes="#//Assignement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="functiondeclaration" lowerBound="1"
-        eType="#//FunctionDeclaration"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parameterAssignement" upperBound="-1"
-        eType="#//Assignement" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionCall" eSuperTypes="#//Assignment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="declaredFunction" lowerBound="1"
+        eType="#//Function"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameterAssignments" upperBound="-1"
+        eType="#//Assignment" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ClassConstruction" eSuperTypes="#//Assignement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassConstruction" eSuperTypes="#//Assignment"/>
   <eClassifiers xsi:type="ecore:EClass" name="NoOperation" abstract="true" eSuperTypes="#//Instruction"/>
   <eClassifiers xsi:type="ecore:EClass" name="Comment" abstract="true" eSuperTypes="#//NoOperation"/>
   <eClassifiers xsi:type="ecore:EClass" name="Package">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//Package"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="kotlinProgram" upperBound="-1"
-        eType="#//KotlinProgram"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="full_path" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Line">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
