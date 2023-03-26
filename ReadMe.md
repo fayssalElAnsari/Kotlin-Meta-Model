@@ -133,10 +133,16 @@ see also: https://kotlinlang.org/docs/basic-syntax.html
 
 
 ## Usage
-To collaborate on this project: 
+### To collaborate on this project: 
 1. clone the repostory in a directory of your choice 
 2. open eclipse modeling 
 3. set the current workspace to the `Kotling - Model Files` folder
 4. edit!
+
+### Debugging
+One of the commun problems while importing a project is due to not regenerating: `src-gen`, `*.edit` and `*.editor` folder. 
+So if there are some problems in the project after import, first trye deleting (also from the hard disk) and regenerating all from the `*.genmodel` file.
+
+another could be due to a `wrong import`, if there are multiple projects in the imported project, select the individual project one by one and deselect the parent project, to avoid reconfiguring the `build path`.
 
 **the default eclipse runtime workspace is used**
