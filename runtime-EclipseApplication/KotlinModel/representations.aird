@@ -16,4 +16,5 @@
   <semanticResources>main/002.kotlinmetamodel</semanticResources>
   <semanticResources>main/PredefinedFunctions.kotlinmetamodel</semanticResources>
   <semanticResources>main/003.kotlinmetamodel</semanticResources>
+  <semanticResources>main/comments.kt</semanticResources>
 </viewpoint:DAnalysis>

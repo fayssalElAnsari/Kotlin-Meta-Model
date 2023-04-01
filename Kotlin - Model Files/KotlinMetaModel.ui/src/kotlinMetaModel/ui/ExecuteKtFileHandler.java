@@ -62,7 +62,7 @@ public class ExecuteKtFileHandler extends AbstractHandler {
 					System.out.println("Command exited with code: " + exitCode);
 
 					System.out.println("*** executing compiled .jar file ***");
-					
+
 					String[] executionCommand = { "cmd", "/c", "java", "-jar", location.toOSString() + "/prog.jar" };
 					pb = new ProcessBuilder(executionCommand);
 					process = pb.start();
