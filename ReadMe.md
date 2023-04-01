@@ -10,6 +10,10 @@ In this project we will try to build a meta model for the famous programming lan
 
 * In Kotlin, functions are considered first-class constructs. This means that functions can be treated as a data type. You can store functions in variables, pass them to other functions as arguments, and return them from other functions.
 
+## Requirements
+* Eclipse modeling
+* A working kotlin compiler `kotlinc` should be added to the system path to execute the generated code.
+
 ## Meta Model Features
 ### 1.
 * [x] Comments
