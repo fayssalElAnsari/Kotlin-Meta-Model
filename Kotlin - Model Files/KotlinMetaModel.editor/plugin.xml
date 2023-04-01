@@ -33,4 +33,5 @@
             contributorClass="kotlinMetaModel.presentation.KotlinMetaModelActionBarContributor">
       </editor>
    </extension>
+
 </plugin>
