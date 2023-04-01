@@ -5,23 +5,21 @@ import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.commands.IHandler;
 
-public class GenerateKotlinFileHandler extends AbstractHandler implements IHandler {
-
-	@Override
-	public boolean isHandled() {
-		// TODO Auto-generated method stub
-		return super.isHandled();
-	}
+public class ExecuteKtFileHandler extends AbstractHandler implements IHandler {
 
 	@Override
 	public boolean isEnabled() {
-		// TODO Auto-generated method stub
-		return super.isEnabled();
+		return true;
+	}
+
+	@Override
+	public boolean isHandled() {
+		return true;
 	}
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
-		System.out.println("handled!");
+		System.out.println("executing .kt file...");
 		return null;
 	}
 

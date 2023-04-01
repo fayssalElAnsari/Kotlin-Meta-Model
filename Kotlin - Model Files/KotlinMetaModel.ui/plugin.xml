@@ -4,8 +4,12 @@
    <extension
          point="org.eclipse.ui.handlers">
       <handler
-            class="kotlinMetaModel.ui.GenerateKotlinFileHandler"
+            class="kotlinMetaModel.ui.GenerateKtFileHandler"
             commandId="KotlinMetaModel.ui.generateKtFile">
+      </handler>
+      <handler
+            class="kotlinMetaModel.ui.ExecuteKtFileHandler"
+            commandId="KotlinMetaModel.ui.executeKtFile">
       </handler>
    </extension>
    <extension
@@ -32,6 +36,28 @@
                            operator="and">
                         <adapt
                               type="kotlinMetaModel.KotlinProgram">
+                        </adapt>
+                     </iterate>
+                  </with>
+               </visibleWhen>
+            </command>
+            <command
+                  commandId="KotlinMetaModel.ui.executeKtFile"
+                  label="Execute .kt File"
+                  style="push">
+               <visibleWhen
+                     checkEnabled="true">
+                  <with
+                        variable="activeMenuSelection">
+                     <iterate
+                           ifEmpty="false"
+                           operator="and">
+                        <adapt
+                              type="org.eclipse.core.resources.IResource">
+                           <test
+                                 property="org.eclipse.core.resources.name"
+                                 value="*.kt">
+                           </test>
                         </adapt>
                      </iterate>
                   </with>
