@@ -60,8 +60,16 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//Body/instructions"/>
     </genClasses>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//Instruction"/>
-    <genClasses ecoreClass="kotlinMetaModel.ecore#//BinaryOperation"/>
-    <genClasses ecoreClass="kotlinMetaModel.ecore#//SimpleInstruction"/>
-    <genClasses ecoreClass="kotlinMetaModel.ecore#//FunctionCall"/>
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//BinaryOperation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kotlinMetaModel.ecore#//BinaryOperation/leftAttribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kotlinMetaModel.ecore#//BinaryOperation/rightAttribute"/>
+    </genClasses>
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//SimpleInstruction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kotlinMetaModel.ecore#//SimpleInstruction/line"/>
+    </genClasses>
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//FunctionCall">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kotlinMetaModel.ecore#//FunctionCall/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kotlinMetaModel.ecore#//FunctionCall/content"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
