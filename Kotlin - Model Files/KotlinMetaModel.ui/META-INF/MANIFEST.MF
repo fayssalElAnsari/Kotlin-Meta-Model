@@ -3,10 +3,11 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Kotlin Code Generator
 Bundle-SymbolicName: KotlinMetaModel.ui;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Require-Bundle: org.eclipse.ui;bundle-version="3.202.0",
+Require-Bundle: org.eclipse.ui;bundle-version="3.201.200",
  KotlinMetaModel;bundle-version="0.1.0",
- org.eclipse.core.resources;bundle-version="3.18.200",
- org.eclipse.core.runtime;bundle-version="3.26.100"
+ org.eclipse.core.resources;bundle-version="3.18.100",
+ org.eclipse.core.runtime;bundle-version="3.26.100",
+ org.eclipse.core.commands
 Bundle-Vendor: Fayssal - Heba
 Automatic-Module-Name: KotlinMetaModel.ui
 Bundle-RequiredExecutionEnvironment: JavaSE-17
