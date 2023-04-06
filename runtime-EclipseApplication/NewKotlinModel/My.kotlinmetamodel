@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kotlinMetaModel:KotlinProgram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:kotlinMetaModel="http://www.example.org/kotlinMetaModel">
+  <type xsi:type="kotlinMetaModel:Int" name="Int"/>
+  <type xsi:type="kotlinMetaModel:Void" name="Void"/>
+  <type xsi:type="kotlinMetaModel:Class" name="Rectangle">
+    <attributes type="//@type.0" name="width"/>
+    <attributes type="//@type.0" name="height"/>
+    <functions return="//@type.0" name="area">
+      <body>
+        <instructions xsi:type="kotlinMetaModel:BinaryOperation" leftAttribute="width" rightAttribute="height"/>
+      </body>
+    </functions>
+  </type>
+  <functions return="//@type.1" name="main">
+    <body>
+      <instructions xsi:type="kotlinMetaModel:VariableDeclaration" type="//@type.2" parameters="//@type.2/@attributes.1 //@type.2/@attributes.0" name="myRect"/>
+      <instructions xsi:type="kotlinMetaModel:FunctionCall" name="println">
+        <content>myRect.area()</content>
+      </instructions>
+    </body>
+  </functions>
+</kotlinMetaModel:KotlinProgram>
