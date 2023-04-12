@@ -13,24 +13,24 @@ KotlinProgram returns KotlinProgram:
 	;
 
 Type returns Type:
-	PrimitiveType | Class;
-	
-PrimitiveType returns PrimitiveType:
-	'primitive' (Int0 | Void | Unit | String0) ';';
+	Int0 | Void | Unit | String0 | Class;
 
 Class returns Class:
 	{Class}
 	'class'
 	name=EString
-	('(' attributes+=Property ( "," attributes+=Property)* ')' )?
+	('(' (attributes+=Property)* ( "," attributes+=Property)* ')' )?
 	'{'
-		(functions+=Function ( "," functions+=Function)*)?
+		(functions+=Function (functions+=Function)*)?
 	'}';
 
 Function returns Function:
+	{Function}
 	'fun'
 	name=EString
-	('(' parameters+=Property ( "," parameters+=Property)* ')' )?
+	'(' 
+	(parameters+=Property)* ( "," parameters+=Property)* 
+	')'
 	':' return=[Type|EString]
 	body=Body
 	;
@@ -40,25 +40,30 @@ EString returns ecore::EString:
 
 Int0 returns Int:
 	{Int}
+	'Int0'
 	name=EString
 	;
 
 Void returns Void:
 	{Void}
+	'Void0'
 	name=EString
 	;
 
 Unit returns Unit:
 	{Unit}
+	'Unit0'
 	name=EString
 	;
 
 String0 returns String:
 	{String}
+	'String0'
 	name=EString
 	;
 
 Property returns Property:
+	{Property}
 	name=EString
 	':'	type=[Type|EString]
 	;
@@ -66,6 +71,6 @@ Property returns Property:
 Body returns Body:
 	{Body}
 	'{'
-		(instructions+=EString ( "," instructions+=EString)*)?
-		(comments+=EString ( "," comments+=EString)*)?
+		(instructions+=EString ';' ( instructions+=EString ';')*)?
+		('//'comments+=EString ( comments+=EString)*)?
 	'}';
