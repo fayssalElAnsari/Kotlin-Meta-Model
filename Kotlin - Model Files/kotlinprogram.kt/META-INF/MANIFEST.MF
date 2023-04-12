@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: kotlinprogram.kt
+Bundle-ManifestVersion: 2
+Bundle-Name: kotlinprogram.kt
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: kotlinprogram.kt; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: KotlinMetaModel,
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Export-Package: kotlinprogram.generator,
+ kotlinprogram.serializer,
+ kotlinprogram.scoping,
+ kotlinprogram,
+ kotlinprogram.services,
+ kotlinprogram.validation
+Import-Package: org.apache.log4j
