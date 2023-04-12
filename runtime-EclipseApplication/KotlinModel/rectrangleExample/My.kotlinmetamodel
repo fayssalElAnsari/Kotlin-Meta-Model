@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kotlinMetaModel:KotlinProgram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:kotlinMetaModel="http://www.example.org/kotlinMetaModel" fileName="001.kt">
+  <types xsi:type="kotlinMetaModel:Int" name=""/>
+  <classes name="Rectangle">
+    <functions name="area">
+      <body/>
+    </functions>
+  </classes>
+</kotlinMetaModel:KotlinProgram>

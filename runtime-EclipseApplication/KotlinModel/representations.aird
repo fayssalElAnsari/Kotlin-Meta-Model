@@ -17,4 +17,7 @@
   <semanticResources>main/PredefinedFunctions.kotlinmetamodel</semanticResources>
   <semanticResources>main/003.kotlinmetamodel</semanticResources>
   <semanticResources>main/comments.kt</semanticResources>
+  <semanticResources>rectrangleExample/01.kt</semanticResources>
+  <semanticResources>rectrangleExample/My.kotlinmetamodel</semanticResources>
+  <semanticResources>rectrangleExample/test_finalGoal.kt</semanticResources>
 </viewpoint:DAnalysis>

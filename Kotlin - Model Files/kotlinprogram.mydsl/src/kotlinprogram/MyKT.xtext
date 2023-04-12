@@ -7,7 +7,6 @@ import "http://www.eclipse.org/emf/2003/XMLType" as type
 
 KotlinProgram returns KotlinProgram:
 	{KotlinProgram}
-	fileName=EString
 	(imports+=[Package|EString] ( "," imports+=[Package|EString])*)?
 	(types+=Type ("," types+=Type)*)?
 	(comments+=Comment ( "," comments+=Comment)*)?

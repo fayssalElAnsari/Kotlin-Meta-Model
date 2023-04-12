@@ -17,8 +17,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ClassDeclaration"/>
   <eClassifiers xsi:type="ecore:EClass" name="Function">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="return" lowerBound="1"
-        eType="#//Type"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="return" eType="#//Type"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="body" lowerBound="1" eType="#//Body"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
