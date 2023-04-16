@@ -38,8 +38,8 @@ Workflow {
 			fragment = ecore2xtext.Ecore2XtextValueConverterServiceFragment2 auto-inject {}
 
 			formatter = {
-				generateStub = false
-				generateXtendStub = false
+				generateStub = true
+				generateXtendStub = true
 			}
 
 			serializer = {

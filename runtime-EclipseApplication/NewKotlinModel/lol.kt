@@ -1,13 +1,14 @@
-primitive Int0;
-primitive Void;
+Int0 Int
 
-class Rectangle(width: Int0, height: Int0) {
-    fun area(): Int0 {
-        return width * height
+class Rectangle(width: Int, height: Int) {
+    fun area(): Int {
+    	val area : Int;
+    	//return width * height;
     }
 }
 
-fun main(): Void {
-    let rectangle = Rectangle(10, 20)
-    println(rectangle.area())
+fun main(): Int {
+	val rectangle = Rectangle("10", "20");
+    //"println(rectangle.area())";
 }
+

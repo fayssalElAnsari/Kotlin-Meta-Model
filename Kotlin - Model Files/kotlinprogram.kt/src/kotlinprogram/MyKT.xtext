@@ -6,14 +6,17 @@ import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
 KotlinProgram returns KotlinProgram:
 	{KotlinProgram}
-	(comments+=EString ( "," comments+=EString)*)?
-	(types+=Type ( "," types+=Type)*)?
-	(classes+=Class ( "," classes+=Class)*)?
+	(comments+=Comment ( "," comments+=Comment)*)?
+	(types+=Type ( types+=Type)*)?
 	(functions+=Function ( "," functions+=Function)*)?
 	;
+	
+Comment returns Comment:
+	SingleLineComment | MultiLinesComment
+;
 
 Type returns Type:
-	Int0 | Void | Unit | String0 | Class;
+	Int0 | Void | Unit | String0 | Double0 | Class;
 
 Class returns Class:
 	{Class}
@@ -34,10 +37,22 @@ Function returns Function:
 	':' return=[Type|EString]
 	body=Body
 	;
+	
+SingleLineComment returns SingleLineComment:
+	{SingleLineComment}
+	'//' content=EString
+;
+
+MultiLinesComment returns MultiLinesComment:
+	{MultiLinesComment}
+	'/*' (content+=EString)* ("\n*" content+=EString)*
+	'*\\'
+	;
 
 EString returns ecore::EString:
-	STRING | ID;
-
+	STRING | ID
+	;
+	
 Int0 returns Int:
 	{Int}
 	'Int0'
@@ -61,16 +76,37 @@ String0 returns String:
 	'String0'
 	name=EString
 	;
+	
+Double0 returns Double:
+	{Double}
+	'Double0'
+	name=EString
+	;
 
 Property returns Property:
 	{Property}
-	name=EString
-	':'	type=[Type|EString]
+	(name=EString ((':' type=[Type|EString]) | ('=' type=[Class|EString])))
+	| (type=[Type|EString])
+	;
+
+Instruction returns Instruction:
+	VariableDeclaration | ClassDeclaration // | return
+	;
+
+ClassDeclaration returns ClassDeclaration:
+	{ClassDeclaration}
+	'val' name=EString '=' class=[Class|EString] '(' parameters+=EString ( "," parameters+=EString)* ')'
+;
+
+VariableDeclaration returns VariableDeclaration:
+	{VariableDeclaration}
+	'val' variable=Property
 	;
 
 Body returns Body:
 	{Body}
 	'{'
-		(instructions+=EString ';' ( instructions+=EString ';')*)?
-		('//'comments+=EString ( comments+=EString)*)?
-	'}';
+		(instructions+=Instruction ';' ( instructions+=Instruction ';')*)?
+		(comments+=Comment ( comments+=Comment)*)?
+	'}'
+	;

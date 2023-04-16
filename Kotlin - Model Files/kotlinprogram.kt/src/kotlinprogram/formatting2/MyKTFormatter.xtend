@@ -15,11 +15,11 @@ class MyKTFormatter extends AbstractFormatter2 {
 
 	def dispatch void format(KotlinProgram kotlinProgram, extension IFormattableDocument document) {
 		// TODO: format HiddenRegions around keywords, attributes, cross references, etc. 
+		for (comment : kotlinProgram.comments) {
+			comment.format
+		}
 		for (type : kotlinProgram.types) {
 			type.format
-		}
-		for (_class : kotlinProgram.classes) {
-			_class.format
 		}
 		for (function : kotlinProgram.functions) {
 			function.format
@@ -36,5 +36,5 @@ class MyKTFormatter extends AbstractFormatter2 {
 		}
 	}
 	
-	// TODO: implement for Function
+	// TODO: implement for Function, VariableDeclaration, Body
 }
