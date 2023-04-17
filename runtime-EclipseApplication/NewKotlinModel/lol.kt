@@ -3,7 +3,7 @@ Int0 Int
 class Rectangle(width: Int, height: Int) {
     fun area(): Int {
     	val area : Int;
-    	//return width * height;
+    	return width * height;
     }
 }
 

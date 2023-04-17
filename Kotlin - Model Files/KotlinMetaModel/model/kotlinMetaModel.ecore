@@ -49,17 +49,30 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Instruction" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="VariableDeclaration" eSuperTypes="#//Instruction">
+  <eClassifiers xsi:type="ecore:EClass" name="VariableDeclaration" eSuperTypes="#//Declaration">
     <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
         eType="#//Property" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Type" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ClassDeclaration" eSuperTypes="#//Instruction">
+  <eClassifiers xsi:type="ecore:EClass" name="ClassDeclaration" eSuperTypes="#//Declaration">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="class" lowerBound="1" eType="#//Class"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameters" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Declaration" abstract="true" eSuperTypes="#//Instruction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PrimitiveOperation" abstract="true"
+      eSuperTypes="#//Instruction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Multiplication" eSuperTypes="#//PrimitiveOperation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="firstOperand" lowerBound="1"
+        eType="#//Property"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="secondOperand" lowerBound="1"
+        eType="#//Property"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Return" eSuperTypes="#//PrimitiveOperation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="returnOpe" eType="#//Multiplication"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="returnValue" eType="#//Property"/>
   </eClassifiers>
 </ecore:EPackage>

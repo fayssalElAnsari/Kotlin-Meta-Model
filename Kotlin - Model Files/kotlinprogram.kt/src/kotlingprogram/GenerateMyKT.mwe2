@@ -1,4 +1,4 @@
-module kotlinprogram.GenerateMyKT
+module kotlingprogram.GenerateMyKT
 
 import org.eclipse.xtext.xtext.generator.*
 import org.eclipse.xtext.xtext.generator.model.project.*
@@ -31,15 +31,15 @@ Workflow {
 			}
 		}
 		language = StandardLanguage {
-			name = "kotlinprogram.MyKT"
+			name = "kotlingprogram.MyKT"
 			fileExtensions = "kt"
 			referencedResource = "platform:/resource/KotlinMetaModel/model/kotlinMetaModel.genmodel"
 			
 			fragment = ecore2xtext.Ecore2XtextValueConverterServiceFragment2 auto-inject {}
 
 			formatter = {
-				generateStub = true
-				generateXtendStub = true
+				generateStub = false
+				generateXtendStub = false
 			}
 
 			serializer = {

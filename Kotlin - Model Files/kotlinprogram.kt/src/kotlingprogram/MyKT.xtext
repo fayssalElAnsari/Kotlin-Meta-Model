@@ -90,8 +90,21 @@ Property returns Property:
 	;
 
 Instruction returns Instruction:
-	VariableDeclaration | ClassDeclaration // | return
+	VariableDeclaration | ClassDeclaration | PrimitiveOperation
 	;
+
+
+PrimitiveOperation returns PrimitiveOperation:
+	Multiplication// | Return
+	;
+
+Multiplication returns Multiplication:
+	firstOperand=[Property|EString] "*" secondOperand=[Property|EString]
+	;
+
+/*Return returns Return:
+	"return" ((returnOpe=[Multiplication|EString]) | (returnValue=[Property|EString]))
+	;*/
 
 ClassDeclaration returns ClassDeclaration:
 	{ClassDeclaration}

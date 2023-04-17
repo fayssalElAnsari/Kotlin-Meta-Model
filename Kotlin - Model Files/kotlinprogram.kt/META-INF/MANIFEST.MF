@@ -14,13 +14,12 @@ Require-Bundle: KotlinMetaModel,
  org.eclipse.xtext.util,
  org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Export-Package: kotlinprogram.parser.antlr.internal,
- kotlinprogram.generator,
+Export-Package: kotlinprogram.generator,
  kotlinprogram.serializer,
- kotlinprogram.parser.antlr,
  kotlinprogram.scoping,
  kotlinprogram,
- kotlinprogram.formatting2,
  kotlinprogram.services,
- kotlinprogram.validation
+ kotlinprogram.validation,
+ kotlinprogram.parser.antlr.internal,
+ kotlinprogram.parser.antlr
 Import-Package: org.apache.log4j
