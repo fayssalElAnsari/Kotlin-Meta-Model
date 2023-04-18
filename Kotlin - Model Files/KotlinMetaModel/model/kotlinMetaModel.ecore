@@ -72,7 +72,10 @@
         eType="#//Property"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Return" eSuperTypes="#//PrimitiveOperation">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="returnOpe" eType="#//Multiplication"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="returnValue" eType="#//Property"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="returnOpe" eType="#//Multiplication"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="returnValue" eType="#//Property"
+        containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Print" eSuperTypes="#//PrimitiveOperation"/>
 </ecore:EPackage>

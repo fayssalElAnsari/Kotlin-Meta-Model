@@ -64,8 +64,9 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//Multiplication/secondOperand"/>
     </genClasses>
     <genClasses ecoreClass="kotlinMetaModel.ecore#//Return">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//Return/returnOpe"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//Return/returnValue"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//Return/returnOpe"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference kotlinMetaModel.ecore#//Return/returnValue"/>
     </genClasses>
+    <genClasses ecoreClass="kotlinMetaModel.ecore#//Print"/>
   </genPackages>
 </genmodel:GenModel>

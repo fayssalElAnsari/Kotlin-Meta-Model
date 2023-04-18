@@ -95,16 +95,20 @@ Instruction returns Instruction:
 
 
 PrimitiveOperation returns PrimitiveOperation:
-	Multiplication// | Return
+	Multiplication | Return | Print
 	;
+
+Print returns Print:
+	("print("EString")") | ("println("EString")")
+;
 
 Multiplication returns Multiplication:
 	firstOperand=[Property|EString] "*" secondOperand=[Property|EString]
 	;
 
-/*Return returns Return:
-	"return" ((returnOpe=[Multiplication|EString]) | (returnValue=[Property|EString]))
-	;*/
+Return returns Return:
+	"return" ((returnOpe = Multiplication) | (returnValue = Property))
+	;
 
 ClassDeclaration returns ClassDeclaration:
 	{ClassDeclaration}
