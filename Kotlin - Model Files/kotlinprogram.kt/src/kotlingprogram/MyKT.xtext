@@ -22,7 +22,9 @@ Class returns Class:
 	{Class}
 	'class'
 	name=EString
-	('(' (attributes+=Property)* ( "," attributes+=Property)* ')' )?
+	('(' 
+		('var' attributes+=Property)* ( ',' 'var' attributes+=Property)* 
+	')')?
 	'{'
 		(functions+=Function (functions+=Function)*)?
 	'}';
@@ -34,7 +36,7 @@ Function returns Function:
 	'(' 
 	(parameters+=Property)* ( "," parameters+=Property)* 
 	')'
-	':' return=[Type|EString]
+	(':' return=[Type|EString])?
 	body=Body
 	;
 	

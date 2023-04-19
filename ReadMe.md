@@ -1,21 +1,20 @@
+
 ## Project Description
 In this project we will try to build a meta model for the famous programming language KOTLIN.
 
-<img src="https://github.com/fayssalElAnsari/Kotlin-Meta-Model/blob/0a17f915f7da55f62969caa99fee786c07d5a5df/Kotlin%20-%20Model%20Files/KotlinMetaModel/model/kotlinMetaModel.png" width="500">
-
 ## General Notes
-* In each step of the meta-model development, we will try to reproduce a code snippet with increasing complexity. In a way that reflects the logic behind the Kotlin language. While avoiding to build unecessary entities and reusing entities when possible, and using the right type of relationship between them. Our goal is to let the user generate a syntaxicly **correct** code from a built kotlin program model.
+* In each step of the meta-model development, we will try to reproduce a code snippet with increasing complexity. In a way that reflects the logic behind the Kotlin language. While avoiding to build unnecessary entities and reusing entities when possible, and using the right type of relationship between them. Our goal is to let the user generate a syntactically **correct** code from a built Kotlin program model.
 
-* The order of execution of steps is the same as the order of adding childs to an entity.
+* The order of execution of steps is the same as the order of adding children to an entity.
 
-* In Kotlin, functions are considered first-class constructs. This means that functions can be treated as a data type. You can store functions in variables, pass them to other functions as arguments, and return them from other functions.
+* This README and our objectives were made by following the official Kotlin guide: https://kotlinlang.org/docs/basic-syntax.html
 
-## Requirements
-* Eclipse modeling
-* A working kotlin compiler `kotlinc` should be added to the system path to execute the generated code.
+## Disclaimer
+* Eclipse Modeling is required, as the project has been set up according to it.
+* A way to try how rightful is the code you will make in Testing.kt, here is an online compiler https://play.kotlinlang.org/
 
 ## Meta Model Features
-### 1.
+All the planned features, those that are checked have been made.
 * [x] Comments
 ```kotlin
 // This is an end-of-line comment
@@ -27,10 +26,9 @@ In this project we will try to build a meta model for the famous programming lan
 /* contains a nested comment *⁠/
 and ends here. */
 ```
-<img src="https://github.com/fayssalElAnsari/Kotlin-Meta-Model/blob/47a9d027e9aae83341f24778667aff1908fc37af/Kotlin%20-%20Model%20Files/KotlinMetaModel/model/CommentModel.png" width="300">
 
 
-* [x] Package definition and imports
+* [ ] Package definition and imports
 ```kotlin
 package my.demo
 
@@ -38,12 +36,14 @@ import kotlin.text.*
 
 // ...
 ```
-<img src="https://github.com/fayssalElAnsari/Kotlin-Meta-Model/blob/ddf4b69407e7fbaed2ee9a3813543ad74bc3df41/Kotlin%20-%20Model%20Files/KotlinMetaModel/model/PackageModel.png" width="300">
 
 
-* [x] Variables
+* [x] Variable declaration
 ```kotlin
 val a: Int = 1  // immediate assignment
+```
+* [ ] More ways to use variables
+```kotlin
 val b = 2   // `Int` type is inferred
 val c: Int  // Type required when no initializer is provided
 c = 3       // deferred assignment
@@ -58,28 +58,25 @@ fun incrementX() {
     x += 1 
 }
 ```
-**NOTES**
-* we differentiate between immediate and deffered assignment using a boolean attribute on our declaration class
-* we have the possibility to reference one assignment object in our model, it should be required if immediateAssignment is set to `true`, and that assignment should be skipped while generating code (since both the declaration and assignment will be considered as one compound instruction).
-<img src="https://github.com/fayssalElAnsari/Kotlin-Meta-Model/blob/4fd11907abfe0028d6dbe9946490e108d397b506/Kotlin%20-%20Model%20Files/KotlinMetaModel/model/VariableModel.png" width="400">
 
 
-* [ ] Print to the standard output
+* [x] Print to the standard output
 ```kotlin
 print("Hello ")
 print("world!")
 
 println("Hello world!")
-println(42)
+```
+* [ ] Print content that are not String
+```kotlin
+print(42)
 ```
 
-* [ ] Functions
+* [x] Functions
 ```kotlin
-fun sum(a: Int, b: Int): Int {
-    return a + b
+fun mult(a: Int, b: Int): Int {
+    return a * b
 }
-
-fun sum(a: Int, b: Int) = a + b
 
 fun printSum(a: Int, b: Int): Unit {
     println("sum of $a and $b is ${a + b}")
@@ -89,29 +86,35 @@ fun printSum(a: Int, b: Int) {
     println("sum of $a and $b is ${a + b}")
 }
 ```
-
-* [ ] Program Entry Point (main functin)
+* [ ] Other way to write a function
+```kotlin
+fun sum(a: Int, b: Int) = a + b
+```
+* [x] Program Entry Point (main function)
 ```kotlin
 fun main() {
     println("Hello world!")
 }
-
+```
+* [ ] Program Entry Point (main functin)
+```kotlin
 fun main(args: Array<String>) {
     println(args.contentToString())
 }
 ```
+* [x] Creating classes and instances
+```kotlin
+class Rectangle(var height: Double, var length: Double) {
+}
 
-
+val rectangle = Rectangle("5.0", "2.0") //this is known as incorrect
+println("The perimeter is ${rectangle.perimeter}")
+```
 * [ ] Creating classes and instances
 ```kotlin
 class Shape
 
-class Rectangle(var height: Double, var length: Double) {
-    var perimeter = (height + length) * 2
-}
-
 val rectangle = Rectangle(5.0, 2.0)
-println("The perimeter is ${rectangle.perimeter}")
 
 open class Shape
 
@@ -119,34 +122,19 @@ class Rectangle(var height: Double, var length: Double): Shape() {
     var perimeter = (height + length) * 2
 }
 ```
-
-### 2.
-* [ ] String templates
-* [ ] Conditional expressions
-* [ ] for loop
-* [ ] while loop
-* [ ] when expression 
-
-### 3.
-* [ ] Ranges
-* [ ] Collections
-* [ ] Nullable values and null checks
-* [ ] ...
-
-see also: https://kotlinlang.org/docs/basic-syntax.html 
-
-
 ## Usage
 ### To collaborate on this project: 
-1. clone the repostory in a directory of your choice 
+1. clone the repository in a directory of your choice 
 2. open eclipse modeling 
-3. set the current workspace to the `Kotling - Model Files` folder
+3. set the current workspace to the `Kotlin - Model Files` folder
 4. edit!
 
 ### Debugging
 One of the commun problems while importing a project is due to not regenerating: `src-gen`, `*.edit` and `*.editor` folder. 
-So if there are some problems in the project after import, first trye deleting (also from the hard disk) and regenerating all from the `*.genmodel` file.
+So if there are some problems in the project after import, try deleting  (from the hard disk as well) before regenerating all the files from the `*.genmodel` file.
 
-another could be due to a `wrong import`, if there are multiple projects in the imported project, select the individual project one by one and deselect the parent project, to avoid reconfiguring the `build path`.
+Another could be due to a `wrong import`, if there are multiple projects in the imported project, select the individual project one by one and deselect the parent project, to avoid reconfiguring the `build path`.
 
-**the default eclipse runtime workspace is used**
+Lastly: The default eclipse runtime workspace is used.
+
+Enjoy trying out this project!

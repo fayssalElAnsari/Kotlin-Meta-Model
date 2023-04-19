@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kotlinMetaModel:KotlinProgram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:kotlinMetaModel="http://www.example.org/kotlinMetaModel">
-  <types xsi:type="kotlinMetaModel:Int"/>
-  <types xsi:type="kotlinMetaModel:Void"/>
+  <functions name="main">
+    <body>
+      <instructions xsi:type="kotlinMetaModel:VariableDeclaration">
+        <variable name="rectangle" type="//@types.1"/>
+      </instructions>
+      <instructions xsi:type="kotlinMetaModel:Print"/>
+    </body>
+  </functions>
+  <types xsi:type="kotlinMetaModel:Int" name="Int"/>
   <types xsi:type="kotlinMetaModel:Class" name="Rectangle">
-    <attributes type="//@types.0" name="width"/>
-    <attributes type="//@types.0" name="height"/>
-    <functions return="//@types.0" name="area">
+    <attributes name="width" type="//@types.0"/>
+    <attributes name="height" type="//@types.0"/>
+    <functions name="area">
       <body>
-        <instructions>return width * height;</instructions>
+        <instructions xsi:type="kotlinMetaModel:Return">
+          <returnOpe firstOperand="//@types.1/@attributes.1" secondOperand="//@types.1/@attributes.0"/>
+        </instructions>
       </body>
     </functions>
   </types>
-  <functions return="//@types.1" name="main">
-    <body>
-      <instructions>val rectangle = Rectangle(10, 20)&#xD;
-    val rectangle = Rectangle(10, 20)&#xD;
-    val rectangle = Rectangle(10, 20)&#xD;
-val rectangle = Rectangle(10, 20);</instructions>
-      <instructions>println(rectangle.area())</instructions>
-    </body>
-  </functions>
 </kotlinMetaModel:KotlinProgram>
